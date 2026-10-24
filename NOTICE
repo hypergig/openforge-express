@@ -1,0 +1,19 @@
+# Attribution & Upstream Credits
+
+This project contains derivative works, remixes, and compositions built upon the OpenForge system created by Devon Jones (Masterwork Tools).
+
+### Upstream Sources
+- **OpenForge System:** Created by Devon Jones / Masterwork Tools
+  - Website: https://openforge.tools/
+  - Patreon: https://www.patreon.com/masterworktools
+  - Licenses: Creative Commons (CC BY-SA 4.0 / CC BY-NC-SA 4.0)
+- **OpenForge Bases Repository:**
+  - Source: https://github.com/MasterworkTools/openforge-bases
+  - Copyright: Devon Jones ("Owner")
+  - License: Apache License 2.0
+
+### Modifications & Derivative Nature
+The files in this repository are not 1:1 mirrors of upstream assets. Modifications include:
+- Composing individual floor, wall, and detail meshes into unified composite models.
+- Adapting and pairing OpenForge tile meshes with OpenForge magnetic and clip bases.
+- Added primitive spacer and support cubes to align, bridge, and bond the tile meshes into solid printable bodies.
