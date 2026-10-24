@@ -1,5 +1,13 @@
 # openforge-express
 
+Ready to print composite OpenForge tiles
+
+## How to build
+
+```sh
+npm run build
+```
+
 ## Acknowledgements & Licensing
 
 This project is an unofficial derivative of **OpenForge** by Devon Jones ([Masterwork Tools](https://openforge.tools/)).
