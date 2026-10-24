@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/three": "^0.186.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "name": "openforge-express",
+  "version": "1.0.0",
+  "description": "Ready to print TTRPG terrain components composed from [open forge](https://openforge.tools/) models. Basically I took parts from Open Forge and fused them together into larger complete components so there is less post-print processing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
