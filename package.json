@@ -14,7 +14,8 @@
   "description": "Ready to print TTRPG terrain components composed from [open forge](https://openforge.tools/) models. Basically I took parts from Open Forge and fused them together into larger complete components so there is less post-print processing.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsx mesh.ts",
+    "watch": "tsx watch mesh.ts"
   },
   "keywords": [],
   "author": "",
