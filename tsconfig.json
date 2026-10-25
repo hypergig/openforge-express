@@ -14,6 +14,6 @@
     "outDir": "./dist",
     "rootDir": "."
   },
-  "include": ["mesh.ts", "src/*"],
+  "include": ["mesh.ts", "parts-download.ts", "src/*"],
   "exclude": ["node_modules", "dist"]
 }
