@@ -2,7 +2,9 @@ import { alignCenter, alignCorner, offset } from "./alighners.ts"
 import { TileRecipes } from "./types.ts"
 
 export const recipes: TileRecipes = {
-  floor: alignCenter,
+  floor: {
+    floor: alignCenter,
+  },
 
   wall: {
     floor: alignCorner("nw"),

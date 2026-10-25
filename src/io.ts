@@ -36,22 +36,3 @@ export function saveSTL(
 
   fs.writeFileSync(outputPath, buffer)
 }
-
-/**
- * Finds the first STL file in a given directory.
- */
-export function resolveFirstSTL(dirPath: string): string {
-  if (!fs.existsSync(dirPath)) {
-    throw new Error(`Directory not found: ${dirPath}`)
-  }
-
-  const file = fs
-    .readdirSync(dirPath)
-    .find(f => !f.startsWith(".") && f.toLowerCase().endsWith(".stl"))
-
-  if (!file) {
-    throw new Error(`No STL found in directory: ${dirPath}`)
-  }
-
-  return path.join(dirPath, file)
-}

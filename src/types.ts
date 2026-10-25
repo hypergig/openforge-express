@@ -9,12 +9,9 @@ export type PartAligner = (
 ) => void
 
 /**
- * A recipe can either be:
- *  - A single aligner function (STL is located directly in the tile folder)
- *  - A map of subfolder names -> aligner functions (for multi-part tiles)
+ * A map of part roles (subfolder names) -> aligner functions.
  */
-export type TileRecipe = PartAligner | Record<string, PartAligner>
-
+export type TileRecipe = Record<string, PartAligner>
 export type TileRecipes = Record<string, TileRecipe>
 
 /**
