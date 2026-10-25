@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "three": "^0.186.1"
+    "three": "^0.186.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
@@ -14,6 +16,7 @@
   "description": "Ready to print TTRPG terrain components composed from [open forge](https://openforge.tools/) models. Basically I took parts from Open Forge and fused them together into larger complete components so there is less post-print processing.",
   "main": "index.js",
   "scripts": {
+    "parts-download": "tsx parts-download.ts",
     "build": "tsx mesh.ts",
     "watch": "tsx watch mesh.ts"
   },
