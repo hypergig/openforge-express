@@ -43,10 +43,13 @@ async function main() {
           continue
         }
 
+        const outPath = path.join(
+          tileOutDir,
+          `${baseKey}-${textureKey}-${tileType}.stl`,
+        )
+
         try {
-          console.log(
-            `   -> Assembling ${baseKey}/${textureKey}/${tileType}...`,
-          )
+          console.log(`   -> Assembling ${outPath}...`)
           const finalTile = buildTile(
             partsDir,
             textureKey,
@@ -56,15 +59,13 @@ async function main() {
             baseSTL,
           )
 
-          // Output path: tiles/<bases>/<textures>/<tiles>.stl
-          const outPath = path.join(tileOutDir, `${tileType}.stl`)
           saveSTL(finalTile, outPath)
           finalTile.dispose()
 
           console.log(`      Saved: ${outPath}`)
         } catch (err) {
           console.error(
-            `      Error building ${baseKey}/${textureKey}/${tileType}:`,
+            `      Error building ${outPath}:`,
             (err as Error).message,
           )
         }
