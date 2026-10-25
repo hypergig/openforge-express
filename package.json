@@ -17,8 +17,8 @@
   "main": "index.js",
   "scripts": {
     "parts-download": "tsx parts-download.ts",
-    "build": "tsx mesh.ts",
-    "watch": "tsx watch mesh.ts"
+    "build": "tsx tiles.ts",
+    "watch": "tsx watch tiles.ts"
   },
   "keywords": [],
   "author": "",
