@@ -1,0 +1,52 @@
+on:
+  push:
+    branches: ["*"]
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js 26
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cache parts directory
+        id: cache-parts
+        uses: actions/cache@v6
+        with:
+          path: parts
+          key: parts-${{ runner.os }}-${{ hashFiles('parts.yaml') }}
+
+      - name: Download parts
+        run: npm run parts-download
+
+      - name: Build tiles
+        run: npm run build
+
+      - name: Package tiles
+        run: ./package.sh
+
+      - name: Upload tile artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: tiles
+          path: dist/*
+
+      - name: Publish tiles
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create --generate-notes dist/*
