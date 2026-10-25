@@ -4,6 +4,14 @@ Ready to print composite OpenForge tiles
 
 ## How to build
 
+1. Download parts cache
+
+```sh
+npm run parts-download
+```
+
+2. Build tiles
+
 ```sh
 npm run build
 ```
