@@ -1,4 +1,4 @@
-import { alignCenter, alignCorner, offset } from "./alighners.ts"
+import { alignCenter, alignCorner, alignerChain, offset } from "./alighners.ts"
 import { TileRecipes } from "./types.ts"
 
 export const recipes: TileRecipes = {
@@ -8,7 +8,7 @@ export const recipes: TileRecipes = {
 
   wall: {
     floor: alignCorner("nw"),
-    wall: offset(0, -19.05),
+    wall: alignerChain(alignCenter, offset(0, -19.05)),
   },
 
   corner: {

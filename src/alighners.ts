@@ -25,14 +25,23 @@ export const alignCenter: PartAligner = (part, base) => {
 }
 
 /**
- * Centers `part` directly on top of `base`, then applies an (x, y) offset.
+ * Applies an (x, y) offset.
  */
-export const offset = (x = 0, y = 0): PartAligner => {
-  return (part, base) => {
-    alignCenter(part, base)
+export const offset =
+  (x = 0, y = 0): PartAligner =>
+  part =>
     part.translate(x, y, 0)
+
+/**
+ * Applies an (x, y, z) rotation.
+ */
+export const rotate =
+  (x = 0, y = 0, z = 0): PartAligner =>
+  part => {
+    if (x) part.rotateX(THREE.MathUtils.degToRad(x))
+    if (y) part.rotateY(THREE.MathUtils.degToRad(y))
+    if (z) part.rotateZ(THREE.MathUtils.degToRad(z))
   }
-}
 
 /**
  * Snaps the specified bottom corner of `part` directly to the matching
@@ -64,3 +73,11 @@ export const alignCorner = (corner: Corner): PartAligner => {
     part.translate(dx, dy, dz)
   }
 }
+
+/**
+ * Chains a bunch of aligners.
+ */
+export const alignerChain =
+  (...aligners: PartAligner[]): PartAligner =>
+  (part, base) =>
+    aligners.forEach(a => a(part, base))
