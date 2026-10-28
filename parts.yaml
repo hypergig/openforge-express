@@ -35,3 +35,14 @@ parts:
           url: https://objects.openforge.tools/models/894bf0/894bf07e5b70e4920daf77d6e621b3b3.stl
           homepage: https://openforge.tools/?md5=894bf07e5b70e4920daf77d6e621b3b3
           md5: 894bf07e5b70e4920daf77d6e621b3b3
+      door:
+        floor:
+          name: dungeon_stone%block#floor+s2w+wall.2x2.openforge.stl
+          url: https://objects.openforge.tools/models/003540/00354077087ede614c97ed2c51d8d798.stl
+          homepage: https://openforge.tools/?md5=00354077087ede614c97ed2c51d8d798
+          md5: 00354077087ede614c97ed2c51d8d798
+        wall:
+          name: dungeon_stone%block#wall,door+arched+narrow.A.openforge,side.stl
+          url: https://objects.openforge.tools/models/c22ebf/c22ebf8fa54824174baf154d3a939c60.stl
+          homepage: https://openforge.tools/?md5=c22ebf8fa54824174baf154d3a939c60
+          md5: c22ebf8fa54824174baf154d3a939c60
